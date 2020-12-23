@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'developers',
     pathMatch: 'full'
   },
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/developers/developers.module').then( m => m.DevelopersPageModule)
   },
   {
-    path: 'developer',
+    path: 'developers/:id',
     loadChildren: () => import('./pages/developer/developer.module').then( m => m.DeveloperPageModule)
   },
 ];
